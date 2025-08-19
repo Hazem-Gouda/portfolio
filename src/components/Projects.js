@@ -8,7 +8,7 @@ const sampleProjects = [
     tech: ['React', 'Material UI', 'Responsive'],
     live: 'https://hazem-gouda.github.io/to-do-list/',
     github: 'https://github.com/Hazem-Gouda/to-do-list',
-    img: '/assets/todoImg.png'
+    img: process.env.PUBLIC_URL + '/assets/todo.png'
   },
   {
     title: 'Weather app',
@@ -16,7 +16,7 @@ const sampleProjects = [
     tech: ['React', 'API', 'Bootstrap', 'Responsive'],
     live: 'https://hazem-gouda.github.io/weather-app/',
     github: 'https://github.com/Hazem-Gouda/weather-app',
-    img: '/assets/weatherImg.png'
+    img: process.env.PUBLIC_URL + '/assets/weather.png'
   },
   {
     title: 'Gouda Restaurant',
@@ -24,7 +24,7 @@ const sampleProjects = [
     tech: ['React', 'Redux', 'Bootstrap', 'Responsive'],
     live: 'https://hazem-gouda.github.io/restaurant-app/',
     github: 'https://github.com/Hazem-Gouda/restaurant-app',
-    img: '/assets/restaurantImg.png'
+    img: process.env.PUBLIC_URL + '/assets/restaurant.png'
   }
 ];
 

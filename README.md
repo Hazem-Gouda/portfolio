@@ -32,10 +32,10 @@ Click here to open the To-Do List app:
 
 ## 📸 Screenshots
 
-| ![Portfolio Screenshot](public/assets/PortfolioSS1.png)
-| ![Portfolio Screenshot](public/assets/PortfolioSS2.png)
-| ![Portfolio Screenshot](public/assets/PortfolioSS3.png)
-| ![Portfolio Screenshot](public/assets/PortfolioSS4.png)
+| ![Portfolio Screenshot](public/assets/portfolio1.png)
+| ![Portfolio Screenshot](public/assets/portfolio2.png)
+| ![Portfolio Screenshot](public/assets/portfolio3.png)
+| ![Portfolio Screenshot](public/assets/portfolio4.png)
 
 ---
 

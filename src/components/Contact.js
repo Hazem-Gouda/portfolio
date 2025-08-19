@@ -5,7 +5,7 @@ export default function Contact() {
   const mail = 'hazemgouda97@yahoo.com';
   const linkedin = 'https://www.linkedin.com/in/hazem-gouda-07ba64191';
   const github = 'https://github.com/hazem-gouda';
-  const resumeLink = '/assets/Hazem_Osama_Gouda_Resume.pdf';
+  const resumeLink = process.env.PUBLIC_URL + '/assets/Hazem_Osama_Gouda_Resume.pdf';
 
   return (
     <section id="contact" className="py-16">

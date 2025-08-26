@@ -10,7 +10,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed w-full z-30 bg-white/60 backdrop-blur-md shadow-sm">
+  <nav role="navigation" aria-label="Main navigation" className="fixed w-full z-30 bg-white/60 backdrop-blur-md shadow-sm">
       {/* reduced horizontal container padding to make sides a little lower */}
       <div className="max-w-5xl mx-auto px-3 sm:px-4 lg:px-6">
         <div className="flex items-center justify-between h-16">
@@ -26,7 +26,7 @@ export default function Navbar() {
             <a className="ml-2 inline-flex items-center px-3 py-1.5 bg-accent text-white rounded-md text-sm" href="#contact">Contact</a>
           </div>
           <div className="md:hidden">
-            <button onClick={() => setOpen(!open)} aria-label="Toggle menu" className="p-2 rounded-md focus:outline-none focus:ring-2">
+            <button onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open} className="p-2 rounded-md focus:outline-none focus:ring-2">
               <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={open ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'} />
               </svg>

@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="text-gray-800">
       <Navbar />
-      <main className="pt-16">
+  <main id="main" role="main" className="pt-16">
         <Hero />
         <Projects />
         <About />

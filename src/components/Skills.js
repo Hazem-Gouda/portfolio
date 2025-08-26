@@ -1,13 +1,13 @@
 import React from 'react';
 
-const skills = ['React', 'Redux', 'HTML5', 'CSS3', 'JavaScript (ES6+)', 'Bootstrap', 'Material UI', 'Tailwind', 'Responsive Design', 'Git & GitHub'];
+const skills = ['React', 'Redux', 'HTML5', 'CSS3', 'JavaScript (ES6+)', 'Bootstrap', 'Material UI', 'Tailwind', 'Responsive Design', 'Git & GitHub', 'Jest', 'React Testing Library', 'Accessibility (a11y)'];
 
 function Icon({ name }) {
   // Return a small, semantic SVG per skill. Keep icons simple and lightweight.
   switch (name) {
     case 'React':
       return (
-        <svg className="w-6 h-6 text-sky-500" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <svg className="w-8 h-8 text-sky-500" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <title>React</title>
           <circle cx="12" cy="12" r="2" stroke="currentColor" strokeWidth="1.5" />
           <ellipse cx="12" cy="12" rx="6.5" ry="2.8" stroke="currentColor" strokeWidth="1" />
@@ -57,12 +57,9 @@ function Icon({ name }) {
       );
     case 'Material UI':
       return (
-        <svg className="w-6 h-6 text-emerald-600" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <title>Material UI (generic)</title>
-          <rect x="4" y="4" width="6" height="6" stroke="currentColor" strokeWidth="1" />
-          <rect x="14" y="4" width="6" height="6" stroke="currentColor" strokeWidth="1" />
-          <rect x="4" y="14" width="6" height="6" stroke="currentColor" strokeWidth="1" />
-          <rect x="14" y="14" width="6" height="6" stroke="currentColor" strokeWidth="1" />
+        <svg className="w-6 h-6 text-blue-600" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <title>Material UI</title>
+          <path d="M4 18V6l4 4 4-6 4 6 4-4v12" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
         </svg>
       );
     case 'Tailwind':
@@ -71,6 +68,32 @@ function Icon({ name }) {
           <title>Tailwind</title>
           <path d="M3 12c5-6 10-6 15 0" stroke="currentColor" strokeWidth="1.2" fill="none" />
           <path d="M3 16c5-4 10-4 15 0" stroke="currentColor" strokeWidth="1.2" fill="none" />
+        </svg>
+      );
+    case 'Jest':
+      return (
+        <svg className="w-6 h-6 text-green-600" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <title>Testing (Jest)</title>
+          <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" strokeWidth="1" fill="none" />
+          <path d="M7 12.5l3 3 7-7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+    case 'React Testing Library':
+      return (
+        <svg className="w-6 h-6 text-indigo-600" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <title>React Testing Library</title>
+          <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1" fill="none" />
+          <path d="M7 9h10M7 13h6" stroke="currentColor" strokeWidth="1.2" />
+        </svg>
+      );
+    case 'Accessibility (a11y)':
+      return (
+        <svg className="w-6 h-6 text-red-400" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <title>Accessibility</title>
+          <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="12" cy="8" r="2" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M7 16c1-3 3-4 5-4s4 1 5 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M7 12h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
         </svg>
       );
     case 'Responsive Design':

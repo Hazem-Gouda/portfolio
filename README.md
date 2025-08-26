@@ -18,7 +18,9 @@ Click here to open the To-Do List app:
 - 🎨 **Tailwind CSS** for fast, responsive, and elegant styling  
 - 📱 **Fully Responsive** design for all screen sizes  
 - 🖼️ **One-page Layout** with smooth scrolling and clean UI  
-- 💼 Showcases **projects, skills, and contact info**  
+- 💼 Showcases **projects, skills, and contact info**
+- 🧪 Tested with **Jest + React Testing Library (RTL)**  
+- ♿ Improved **Accessibility (a11y)** for better user experience  
 
 ---
 
@@ -39,7 +41,22 @@ Click here to open the To-Do List app:
 
 ---
 
-
-This project is licensed under the MIT License - feel free to use and modify it.
+📄 License
+This project is licensed under the MIT License — feel free to use and modify it.
 
 Made with ❤️ by Hazem Gouda
+---
+### 📦 Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/hazem-gouda/weather-app.git
+
+# Navigate into the directory
+cd weather-app
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm start

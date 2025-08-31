@@ -1,13 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const buttonRef = useRef(null);
+  const menuRef = useRef(null);
   const links = [
     { name: 'Home', to: '#home' },
     { name: 'Projects', to: '#projects' },
     { name: 'About', to: '#about' },
     { name: 'Skills', to: '#skills' }
   ];
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (!open) return;
+      const target = e.target;
+      if (menuRef.current && buttonRef.current) {
+        if (!menuRef.current.contains(target) && !buttonRef.current.contains(target)) {
+          setOpen(false);
+        }
+      }
+    }
+
+    function handleKey(e) {
+      if (e.key === 'Escape') setOpen(false);
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+    document.addEventListener('keydown', handleKey);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+      document.removeEventListener('keydown', handleKey);
+    };
+  }, [open]);
 
   return (
   <nav role="navigation" aria-label="Main navigation" className="fixed w-full z-30 bg-white/60 backdrop-blur-md shadow-sm">
@@ -26,7 +53,7 @@ export default function Navbar() {
             <a className="ml-2 inline-flex items-center px-3 py-1.5 bg-accent text-white rounded-md text-sm" href="#contact">Contact</a>
           </div>
           <div className="md:hidden">
-            <button onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open} className="p-2 rounded-md focus:outline-none focus:ring-2">
+            <button ref={buttonRef} onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open} className="p-2 rounded-md focus:outline-none focus:ring-2">
               <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={open ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'} />
               </svg>
@@ -36,11 +63,13 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden">
+        <div className="md:hidden" ref={menuRef}>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {links.map(l => (
               <a key={l.name} href={l.to} onClick={() => setOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">{l.name}</a>
             ))}
+            {/* Mobile Contact button - closes menu when clicked */}
+            <a href="#contact" onClick={() => setOpen(false)} className="block w-full text-center px-3 py-2 rounded-md text-base font-medium bg-accent text-white hover:opacity-95">Contact</a>
           </div>
         </div>
       )}

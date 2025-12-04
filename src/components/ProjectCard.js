@@ -1,5 +1,16 @@
 import React from 'react';
 
+/**
+ * ProjectCard component
+ * Displays a single project with image, description, tech stack, and links
+ * @param {string} title - Project title
+ * @param {string} desc - Project description
+ * @param {string[]} tech - Array of technology tags
+ * @param {string} imgAlt - Alt text for project image
+ * @param {string} img - Image URL
+ * @param {string} live - Live demo URL
+ * @param {string} github - GitHub repository URL
+ */
 export default function ProjectCard({ title, desc, tech = [], imgAlt = '', img, live, github }) {
   return (
     <div className="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">

@@ -1,5 +1,9 @@
 import React from 'react';
 
+/**
+ * Footer component
+ * Simple footer with copyright information
+ */
 export default function Footer() {
   return (
     <footer className="py-6 text-center text-sm text-gray-500">

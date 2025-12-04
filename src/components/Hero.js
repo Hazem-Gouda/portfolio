@@ -1,5 +1,9 @@
 import React from 'react';
 
+/**
+ * Hero section component
+ * Main landing section with introduction and call-to-action buttons
+ */
 export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center" >

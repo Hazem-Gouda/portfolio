@@ -1,5 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 
+/**
+ * Navbar component
+ * Fixed navigation bar with responsive mobile menu
+ * Includes click-outside and keyboard (Escape) handlers for accessibility
+ */
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const buttonRef = useRef(null);

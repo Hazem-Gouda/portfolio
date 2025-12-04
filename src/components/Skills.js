@@ -1,18 +1,37 @@
 import React from 'react';
 
-const skills = ['React', 'Redux', 'HTML5', 'CSS3', 'JavaScript (ES6+)', 'Bootstrap', 'Material UI', 'Tailwind', 'Responsive Design', 'Git & GitHub', 'Jest', 'React Testing Library', 'Accessibility (a11y)'];
+/**
+ * Skills section component
+ * Displays a grid of technical skills with custom SVG icons
+ */
 
+// Skills array - ordered logically by category (frameworks, languages, tools, testing)
+const skills = ['React.js', 'Next.js', 'Redux', 'HTML5', 'CSS3', 'JavaScript (ES6+)', 'Bootstrap', 'Material UI', 'Tailwind', 'Responsive Design', 'Git & GitHub', 'Jest', 'React Testing Library', 'Accessibility (a11y)'];
+
+/**
+ * Icon component
+ * Returns a semantic SVG icon for each skill
+ * Icons are simple, lightweight, and color-coded
+ * @param {string} name - Skill name to render icon for
+ */
 function Icon({ name }) {
-  // Return a small, semantic SVG per skill. Keep icons simple and lightweight.
   switch (name) {
-    case 'React':
+    case 'React.js':
       return (
         <svg className="w-8 h-8 text-sky-500" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <title>React</title>
+          <title>React.js</title>
           <circle cx="12" cy="12" r="2" stroke="currentColor" strokeWidth="1.5" />
           <ellipse cx="12" cy="12" rx="6.5" ry="2.8" stroke="currentColor" strokeWidth="1" />
           <ellipse cx="12" cy="12" rx="6.5" ry="2.8" stroke="currentColor" strokeWidth="1" transform="rotate(60 12 12)" />
           <ellipse cx="12" cy="12" rx="6.5" ry="2.8" stroke="currentColor" strokeWidth="1" transform="rotate(120 12 12)" />
+        </svg>
+      );
+    case 'Next.js':
+      return (
+        <svg className="w-6 h-6 text-gray-800" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <title>Next.js</title>
+          <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M9 8l6 8M15 8l-6 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       );
     case 'Redux':
@@ -126,12 +145,17 @@ function Icon({ name }) {
   }
 }
 
+/**
+ * Skills component
+ * Renders a responsive grid of skill items with icons
+ */
 export default function Skills() {
   return (
     <section id="skills" className="py-16 bg-gray-50">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-2xl font-bold text-primary">Skills</h2>
         <p className="mt-2 text-gray-600">Frontend skills and tools I use regularly.</p>
+        {/* Responsive grid: 2 columns on mobile, 3 on tablet and up */}
         <ul className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
           {skills.map(s => (
             <li key={s} className="flex items-center gap-3 bg-white p-3 rounded shadow-sm">

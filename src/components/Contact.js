@@ -1,5 +1,10 @@
 import React from 'react';
 
+/**
+ * Contact section component
+ * Displays contact information and social media links
+ * Includes phone, WhatsApp, email, LinkedIn, GitHub, and resume download
+ */
 export default function Contact() {
   const phone = '+20106759041';
   const mail = 'hazemgouda97@yahoo.com';

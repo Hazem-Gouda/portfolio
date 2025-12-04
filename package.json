@@ -2,7 +2,6 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hazem-gouda.github.io/portfolio",
   "description": "A classy, simple, and responsive portfolio website built with React and Tailwind CSS",
   "author": "Hazem Gouda",
   "dependencies": {

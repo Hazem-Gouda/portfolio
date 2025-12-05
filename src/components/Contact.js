@@ -6,11 +6,11 @@ import React from 'react';
  * Includes phone, WhatsApp, email, LinkedIn, GitHub, and resume download
  */
 export default function Contact() {
-  const phone = '+20106759041';
+  const phone = '+201067594041';
   const mail = 'hazemgouda97@yahoo.com';
-  const linkedin = 'https://www.linkedin.com/in/hazem-gouda-07ba64191';
+  const linkedin = 'https://linkedin.com/in/Hazem-Gouda';
   const github = 'https://github.com/hazem-gouda';
-  const resumeLink = '/assets/Hazem_Gouda_Frontend_Resume.pdf';
+  const resumeLink = process.env.PUBLIC_URL + '/assets/Hazem_Gouda_Frontend_Resume.pdf';
 
   return (
     <section id="contact" className="py-16">

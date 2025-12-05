@@ -12,9 +12,9 @@ const sampleProjects = [
     title: 'Gouda Restaurant',
     desc: 'My ex-Restaurant website',
     tech: ['React', 'Next.js', 'Redux', 'Bootstrap'],
-    live: 'https://gouda-restaurant.vercel.app/',
+    live: 'https://restaurant-app-virid-delta.vercel.app/',
     github: 'https://github.com/Hazem-Gouda/restaurant-app',
-    img: '/assets/restaurant.png'
+    img: process.env.PUBLIC_URL + '/assets/restaurant.png'
   },
   {
     title: 'Weather app',
@@ -22,7 +22,7 @@ const sampleProjects = [
     tech: ['React', 'Next.js', 'API', 'Bootstrap'],
     live: 'https://weather-app-hazem.vercel.app/',
     github: 'https://github.com/Hazem-Gouda/weather-app',
-    img: '/assets/weather.png'
+    img: process.env.PUBLIC_URL + '/assets/weather.png'
   },
   {
     title: 'To-do List app',
@@ -30,7 +30,7 @@ const sampleProjects = [
     tech: ['React', 'Material UI', 'Responsive'],
     live: 'https://hazem-gouda.github.io/to-do-list/',
     github: 'https://github.com/Hazem-Gouda/to-do-list',
-    img: '/assets/todo.png'
+    img: process.env.PUBLIC_URL + '/assets/todo.png'
   }
 ];
 

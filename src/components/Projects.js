@@ -10,19 +10,19 @@ import ProjectCard from './ProjectCard';
 const sampleProjects = [
   {
     title: 'Gouda Restaurant',
-    desc: 'My ex-Restaurant (Redux for illustration)',
-    tech: ['React', 'Redux', 'Bootstrap', 'Responsive'],
-    live: 'https://hazem-gouda.github.io/restaurant-app/',
+    desc: 'My ex-Restaurant website',
+    tech: ['React', 'Next.js', 'Redux', 'Bootstrap'],
+    live: 'https://gouda-restaurant.vercel.app/',
     github: 'https://github.com/Hazem-Gouda/restaurant-app',
-    img: process.env.PUBLIC_URL + '/assets/restaurant.png'
+    img: '/assets/restaurant.png'
   },
   {
     title: 'Weather app',
     desc: 'OpenWeather API fetch used',
-    tech: ['React', 'API', 'Bootstrap', 'Responsive'],
-    live: 'https://hazem-gouda.github.io/weather-app/',
+    tech: ['React', 'Next.js', 'API', 'Bootstrap'],
+    live: 'https://weather-app-hazem.vercel.app/',
     github: 'https://github.com/Hazem-Gouda/weather-app',
-    img: process.env.PUBLIC_URL + '/assets/weather.png'
+    img: '/assets/weather.png'
   },
   {
     title: 'To-do List app',
@@ -30,7 +30,7 @@ const sampleProjects = [
     tech: ['React', 'Material UI', 'Responsive'],
     live: 'https://hazem-gouda.github.io/to-do-list/',
     github: 'https://github.com/Hazem-Gouda/to-do-list',
-    img: process.env.PUBLIC_URL + '/assets/todo.png'
+    img: '/assets/todo.png'
   }
 ];
 
